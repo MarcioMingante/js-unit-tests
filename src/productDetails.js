@@ -42,4 +42,6 @@ const productDetails = (firstProduct, secondProduct) => [
   },
 ];
 
+console.log(typeof productDetails('alcol', 'gel'));
+
 module.exports = productDetails;
