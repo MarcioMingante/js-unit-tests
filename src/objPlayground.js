@@ -34,8 +34,33 @@
   arrayGenerator('entries', { sum: 3, mult: 2, div: 0, sub: -1 }) // [ [ 'sum', 3 ], [ 'mult', 2 ], [ 'div', 0 ], [ 'sub', -1 ] ]
 */
 
-const calculator = (number1, number2) => {};
+const calculator = (number1, number2) => {
+  const adding = number1 + number2;
+  const multiplication = number1 * number2;
+  const division = Math.floor(number1 / number2);
+  const subtraction = number1 - number2;
 
-const arrayGenerator = (type, object) => {};
+  return {
+    sum: adding,
+    mult: multiplication,
+    div: division,
+    sub: subtraction,
+  };
+};
+
+const arrayGenerator = (type, object) => {
+  if (type === 'keys') {
+    return Object.keys(object);
+    // se tem como atribur uma função como parametro type poder substituir a função keys no caso.
+  }
+
+  if (type === 'values') {
+    return Object.values(object);
+  }
+
+  if (type === 'entries') {
+    return Object.entries(object);
+  }
+};
 
 module.exports = { calculator, arrayGenerator };
