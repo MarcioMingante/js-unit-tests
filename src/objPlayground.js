@@ -51,7 +51,6 @@ const calculator = (number1, number2) => {
 const arrayGenerator = (type, object) => {
   if (type === 'keys') {
     return Object.keys(object);
-    // se tem como atribur uma função como parametro type poder substituir a função keys no caso.
   }
 
   if (type === 'values') {
